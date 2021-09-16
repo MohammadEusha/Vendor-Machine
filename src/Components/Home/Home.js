@@ -1,6 +1,7 @@
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 import Chocolate from '../../Image/Chocolate.jpg'
 import Milk from '../../Image/Milk.jpg'
 import tang from '../../Image/Tang.jpg'
@@ -29,11 +30,43 @@ const Home = () => {
     console.log(userPrice);
     console.log(productName);
 
-    const handleBuy = (e) => {
-        const productOne = document.getElementById('prouctOne').innerText.toLowerCase();
+    const handleBuyProductOne = (e) => {
+        const productOne = document.getElementById('productOne').innerText.toLowerCase();
         const productPrice = document.getElementById('priceOne').innerText;
         if ((userPrice === productPrice) && (productName === productOne)) {
-            alert('ki mia ki kaiba')
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Chocolate Has Been Purchased',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    }
+    const handleBuyProductTwo = (e) => {
+        const productOne = document.getElementById('productTwo').innerText.toLowerCase();
+        const productPrice = document.getElementById('priceTwo').innerText;
+        if ((userPrice === productPrice) && (productName === productOne)) {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Milk Has Been Purchased',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+    }
+    const handleBuyProductThree = (e) => {
+        const productOne = document.getElementById('productThree').innerText.toLowerCase();
+        const productPrice = document.getElementById('priceThree').innerText;
+        if ((userPrice === productPrice) && (productName === productOne)) {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'success',
+                title: 'Tang Has Been Purchased',
+                showConfirmButton: false,
+                timer: 1500
+            })
         }
     }
 
@@ -51,13 +84,13 @@ const Home = () => {
                                 <div className="card-body text-center">
                                     <div className='d-flex'>
                                         <h5 >Product Name :</h5>
-                                        <h5 id="prouctOne" className="">Chocolate</h5>
+                                        <h5 id="productOne" className="">Chocolate</h5>
                                     </div>
                                     <div className='d-flex'>
                                         <h5>Product Price: $</h5>
                                         <h5 id='priceOne' className="">100</h5>
                                     </div>
-                                    <button onClick={handleBuy} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
+                                    <button onClick={handleBuyProductOne} type="button" className="btn btn-danger col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
                                 </div>
                             </div>
                         </div>
@@ -69,14 +102,14 @@ const Home = () => {
                                 <div className="card-body text-center">
                                     <div className='d-flex'>
                                         <h5>Product Name : </h5>
-                                        <h5 className=""> Milk</h5>
+                                        <h5 id="productTwo"> Milk</h5>
                                     </div>
                                     <div className='d-flex'>
                                         <h5>Product Price: $</h5>
-                                        <h5 className="">200</h5>
+                                        <h5 id="priceTwo">200</h5>
                                     </div>
 
-                                    <button onClick={(e) => console.log('click')} type="button" className="btn btn-danger col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
+                                    <button onClick={handleBuyProductTwo} type="button" className="btn btn-danger col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
 
                                 </div>
                             </div>
@@ -89,14 +122,14 @@ const Home = () => {
                                 <div className="card-body text-center">
                                     <div className='d-flex'>
                                         <h5>Product Name : </h5>
-                                        <h5 className=""> Tang</h5>
+                                        <h5 id="productThree"> Tang</h5>
                                     </div>
                                     <div className='d-flex'>
                                         <h5>Product Price: $</h5>
-                                        <h5 className="">300</h5>
+                                        <h5 id="priceThree">300</h5>
                                     </div>
 
-                                    <button onClick={(e) => console.log('click')} type="button" className="btn btn-danger col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
+                                    <button onClick={handleBuyProductThree} type="button" className="btn btn-danger col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
 
 
                                 </div>
