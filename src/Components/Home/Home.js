@@ -45,8 +45,14 @@ const Home = () => {
                                     <img src={Chocolate} className="card-img-top img-fluid w-50 h-100 text-center" alt="..." />
                                 </div>
                                 <div className="card-body text-center">
-                                    <h5 className="">Product Name : Chocolate</h5>
-                                    <h5 className="text-dark">Product Price : 100 $</h5>
+                                    <div className='d-flex'>
+                                        <h5>Product Name :</h5>
+                                        <h5 className="">Chocolate</h5>
+                                    </div>
+                                    <div className='d-flex'>
+                                        <h5>Product Price: $</h5>
+                                        <h5 className="">100</h5>
+                                    </div>
                                     <button onClick={(e) => handleBuy(e)} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
 
 
