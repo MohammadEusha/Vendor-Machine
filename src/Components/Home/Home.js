@@ -5,11 +5,34 @@ import Chocolate from '../../Image/Chocolate.jpg'
 import Milk from '../../Image/Milk.jpg'
 import tang from '../../Image/Tang.jpg'
 
+const data = [
+    {
+        productName: 'Chocolate',
+        price: 100,
+        img: ''
+    },
+    {
+        productName: 'Milk',
+        price: 200,
+        img: ''
+    },
+    {
+        productName: 'Tang',
+        price: 120,
+        img: ''
+    },
+]
+
 const Home = () => {
     const [userPrice, setUserPrice] = useState('');
     const [productName, setProductName] = useState('');
     console.log(userPrice);
     console.log(productName);
+
+    const handleBuy = (e) => {
+        console.log(e.target)
+    }
+
     return (
         <div>
             <div class="card text-secondary border border-info border-2 rounded focus mt-5">
@@ -22,7 +45,7 @@ const Home = () => {
                                 <div className="card-body text-center">
                                     <h5 className="">Product Name : Chocolate</h5>
                                     <h5 className="text-dark">Product Price : 100 $</h5>
-                                    <button type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
+                                    <button onClick={(e) => handleBuy(e)} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
 
 
                                 </div>
@@ -33,8 +56,8 @@ const Home = () => {
                                 <img src={Milk} className="card-img-top img-fluid" alt="..." />
                                 <div className="card-body text-center">
                                     <h5 className="">Product Name : Milk</h5>
-                                    <h5 className="text-dark">Product Price : 200 $</h5>
-                                    <button type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
+                                    <h5 className="text-dark">Product Price : 200</h5>
+                                    <button onClick={(e) => console.log('click')} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
 
                                 </div>
                             </div>
@@ -45,7 +68,7 @@ const Home = () => {
                                 <div className="card-body text-center">
                                     <h5 className="">Product Name : Tang</h5>
                                     <h5 className="text-dark">Product Price : 300$</h5>
-                                    <button type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
+                                    <button onClick={(e) => console.log('click')} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
 
 
                                 </div>
