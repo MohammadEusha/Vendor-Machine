@@ -42,6 +42,15 @@ const Home = () => {
                 timer: 1500
             })
         }
+        if ((userPrice !== productPrice) && (productName !== productOne || productName !== 'Chocolate')) {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'Please make sure input field for this product.',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
         if ((userPrice !== productPrice) && (productName === productOne || productName === 'Chocolate')) {
             Swal.fire({
                 position: 'top-center',
@@ -69,6 +78,15 @@ const Home = () => {
                 position: 'top-center',
                 icon: 'success',
                 title: 'Milk Has Been Purchased',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+        if ((userPrice !== productPrice) && (productName !== productOne || productName !== 'Milk')) {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'Please make sure input field for this product.',
                 showConfirmButton: false,
                 timer: 1500
             })
@@ -102,6 +120,15 @@ const Home = () => {
                 title: 'Tang Has Been Purchased',
                 showConfirmButton: false,
                 timer: 1500
+            })
+        }
+        if ((userPrice !== productPrice) && (productName !== productOne || productName !== 'Tang')) {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'Please make sure input field for this product.',
+                showConfirmButton: false,
+                timer: 2000
             })
         }
         if ((userPrice !== productPrice) && (productName === productOne || productName === 'Tang')) {
