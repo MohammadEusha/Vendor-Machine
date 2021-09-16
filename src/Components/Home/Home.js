@@ -46,8 +46,8 @@ const Home = () => {
                                 </div>
                                 <div className="card-body text-center">
                                     <div className='d-flex'>
-                                        <h5>Product Name :</h5>
-                                        <h5 className="">Chocolate</h5>
+                                        <h5>Product Name : </h5>
+                                        <h5 className=""> Chocolate</h5>
                                     </div>
                                     <div className='d-flex'>
                                         <h5>Product Price: $</h5>
@@ -65,8 +65,15 @@ const Home = () => {
                                     <img src={Milk} className="card-img-top img-fluid w-50 h-100" alt="..." />
                                 </div>
                                 <div className="card-body text-center">
-                                    <h5 className="">Product Name : Milk</h5>
-                                    <h5 className="text-dark">Product Price : 200</h5>
+                                    <div className='d-flex'>
+                                        <h5>Product Name : </h5>
+                                        <h5 className=""> Milk</h5>
+                                    </div>
+                                    <div className='d-flex'>
+                                        <h5>Product Price: $</h5>
+                                        <h5 className="">200</h5>
+                                    </div>
+
                                     <button onClick={(e) => console.log('click')} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
 
                                 </div>
@@ -78,8 +85,15 @@ const Home = () => {
                                     <img src={tang} className="card-img-top img-fluid w-50 h-100" alt="..." />
                                 </div>
                                 <div className="card-body text-center">
-                                    <h5 className="">Product Name : Tang</h5>
-                                    <h5 className="text-dark">Product Price : 300$</h5>
+                                    <div className='d-flex'>
+                                        <h5>Product Name : </h5>
+                                        <h5 className=""> Tang</h5>
+                                    </div>
+                                    <div className='d-flex'>
+                                        <h5>Product Price: $</h5>
+                                        <h5 className="">300</h5>
+                                    </div>
+
                                     <button onClick={(e) => console.log('click')} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
 
 

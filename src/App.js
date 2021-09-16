@@ -3,7 +3,7 @@ import Home from './Components/Home/Home';
 
 function App() {
   return (
-    <div className="container mt-5 pt-5">
+    <div className="container mt-5">
       <Home />
     </div>
   );
