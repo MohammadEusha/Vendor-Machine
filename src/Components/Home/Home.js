@@ -6,24 +6,6 @@ import Chocolate from '../../Image/Chocolate.jpg'
 import Milk from '../../Image/Milk.jpg'
 import tang from '../../Image/Tang.jpg'
 
-const data = [
-    {
-        productName: 'Chocolate',
-        price: 100,
-        img: ''
-    },
-    {
-        productName: 'Milk',
-        price: 200,
-        img: ''
-    },
-    {
-        productName: 'Tang',
-        price: 120,
-        img: ''
-    },
-]
-
 const Home = () => {
     const [userPrice, setUserPrice] = useState('');
     const [productName, setProductName] = useState('');
