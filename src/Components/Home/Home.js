@@ -15,7 +15,7 @@ const Home = () => {
                                 <div className="card-body">
                                     <h5 className="text-center">Product Name : Chips</h5>
                                     <div className="mt-3 d-flex">
-                                        <h3 className="text-dark col-md-6">Product Price : </h3>
+                                        <h5 className="text-dark col-md-6">Product Price : </h5>
                                         <button type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
                                     </div>
 
@@ -29,7 +29,7 @@ const Home = () => {
                                 <div className="card-body">
                                     <h5 className="text-center">Product Name : Cookies</h5>
                                     <div className="mt-3 d-flex">
-                                        <h3 className="text-dark col-md-6">Product Price : </h3>
+                                        <h5 className="text-dark col-md-6">Product Price : </h5>
                                         <button type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
                                     </div>
 
@@ -42,7 +42,7 @@ const Home = () => {
                                 <div className="card-body">
                                     <h5 className="text-center">Product Name : Chocolate</h5>
                                     <div className="mt-3 d-flex">
-                                        <h3 className="text-dark col-md-6">Product Price : </h3>
+                                        <h5 className="text-dark col-md-6">Product Price : </h5>
                                         <button type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
                                     </div>
 
