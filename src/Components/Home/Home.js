@@ -1,8 +1,12 @@
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useState } from 'react';
 
 const Home = () => {
+    const [userPrice, setUserPrice] = useState('');
+    const [productName, setProductName] = useState('');
+    console.log(userPrice);
+    console.log(productName);
     return (
         <div>
             <div class="card text-secondary border border-info border-2 rounded focus mt-5">
@@ -21,7 +25,6 @@ const Home = () => {
 
                                 </div>
                             </div>
-
                         </div>
                         <div className="col-md-4">
                             <div class="card h-auto mb-3 card-bg text-dark border border-info border-2 rounded focus">
@@ -55,7 +58,7 @@ const Home = () => {
             <div className="row mt-1">
                 <div className="col-md-6">
                     <div class="input-group mb-3 border border-info border-2 rounded">
-                        <input type="text" class="form-control" placeholder="Name" aria-label="Recipient's username" aria-describedby="basic-addon2" />
+                        <input onChange={(e) => setProductName(e.target.value)} type="text" class="form-control" placeholder="Name" aria-label="Recipient's username" aria-describedby="basic-addon2" />
                         <span class="input-group-text" id="basic-addon2">Product Name</span>
                     </div>
                 </div>
@@ -63,7 +66,7 @@ const Home = () => {
                 <div className="col-md-6">
                     <div class="input-group mb-3 col-md-6 border border-info border-2 rounded">
                         <span class="input-group-text">$</span>
-                        <input type="text" class="form-control" placeholder="Price" aria-label="Amount (to the nearest dollar)" />
+                        <input onChange={(e) => setUserPrice(e.target.value)} type="number" class="form-control" placeholder="Price" aria-label="Amount (to the nearest dollar)" />
                         <span class="input-group-text">.00</span>
                     </div>
                 </div>
