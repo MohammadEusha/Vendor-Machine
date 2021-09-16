@@ -30,7 +30,11 @@ const Home = () => {
     console.log(productName);
 
     const handleBuy = (e) => {
-        console.log(e.target)
+        const productOne = document.getElementById('prouctOne').innerText.toLowerCase();
+        const productPrice = document.getElementById('priceOne').innerText;
+        if ((userPrice === productPrice) && (productName === productOne)) {
+            alert('ki mia ki kaiba')
+        }
     }
 
     return (
@@ -46,16 +50,14 @@ const Home = () => {
                                 </div>
                                 <div className="card-body text-center">
                                     <div className='d-flex'>
-                                        <h5>Product Name :</h5>
-                                        <h5 className="">Chocolate</h5>
+                                        <h5 >Product Name :</h5>
+                                        <h5 id="prouctOne" className="">Chocolate</h5>
                                     </div>
                                     <div className='d-flex'>
                                         <h5>Product Price: $</h5>
-                                        <h5 className="">100</h5>
+                                        <h5 id='priceOne' className="">100</h5>
                                     </div>
-                                    <button onClick={(e) => handleBuy(e)} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
-
-
+                                    <button onClick={handleBuy} type="button" className="btn btn-secondary col-md-6 rounded-pill   "><FontAwesomeIcon icon={faCartPlus} />  Buy Now</button>
                                 </div>
                             </div>
                         </div>
