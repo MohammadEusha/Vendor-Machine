@@ -33,7 +33,7 @@ const Home = () => {
     const handleBuyProductOne = (e) => {
         const productOne = document.getElementById('productOne').innerText.toLowerCase();
         const productPrice = document.getElementById('priceOne').innerText;
-        if ((userPrice === productPrice) && (productName === productOne)) {
+        if ((userPrice === productPrice) && (productName === productOne || productName === 'Chocolate')) {
             Swal.fire({
                 position: 'top-center',
                 icon: 'success',
@@ -42,11 +42,20 @@ const Home = () => {
                 timer: 1500
             })
         }
+        if (userPrice === '') {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'can’t make a selection without inserting money',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
     }
     const handleBuyProductTwo = (e) => {
         const productOne = document.getElementById('productTwo').innerText.toLowerCase();
         const productPrice = document.getElementById('priceTwo').innerText;
-        if ((userPrice === productPrice) && (productName === productOne)) {
+        if ((userPrice === productPrice) && (productName === productOne || productName === 'Milk')) {
             Swal.fire({
                 position: 'top-center',
                 icon: 'success',
@@ -55,15 +64,33 @@ const Home = () => {
                 timer: 1500
             })
         }
+        if (userPrice === '') {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'can’t make a selection without inserting money',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
     }
     const handleBuyProductThree = (e) => {
         const productOne = document.getElementById('productThree').innerText.toLowerCase();
         const productPrice = document.getElementById('priceThree').innerText;
-        if ((userPrice === productPrice) && (productName === productOne)) {
+        if ((userPrice === productPrice) && (productName === productOne || productName === 'Tang')) {
             Swal.fire({
                 position: 'top-center',
                 icon: 'success',
                 title: 'Tang Has Been Purchased',
+                showConfirmButton: false,
+                timer: 1500
+            })
+        }
+        if (userPrice === '') {
+            Swal.fire({
+                position: 'top-center',
+                icon: 'error',
+                title: 'can’t make a selection without inserting money',
                 showConfirmButton: false,
                 timer: 1500
             })
