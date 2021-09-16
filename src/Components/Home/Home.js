@@ -40,8 +40,10 @@ const Home = () => {
                 <div class="p-5">
                     <div className="row">
                         <div className="col-md-4">
-                            <div class="card h-auto mb-3 card-bg text-dark border border-info border-2 rounded focus">
-                                <img src={Chocolate} className="card-img-top img-fluid" alt="..." />
+                            <div class="card h-100 mb-3 card-bg text-dark border border-info border-2 rounded focus">
+                                <div className="text-center">
+                                    <img src={Chocolate} className="card-img-top img-fluid w-50 h-100 text-center" alt="..." />
+                                </div>
                                 <div className="card-body text-center">
                                     <h5 className="">Product Name : Chocolate</h5>
                                     <h5 className="text-dark">Product Price : 100 $</h5>
@@ -52,8 +54,10 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div class="card h-auto mb-3 card-bg text-dark border border-info border-2 rounded focus">
-                                <img src={Milk} className="card-img-top img-fluid" alt="..." />
+                            <div class="card h-100 mb-3 card-bg text-dark border border-info border-2 rounded focus">
+                                <div className="text-center">
+                                    <img src={Milk} className="card-img-top img-fluid w-50 h-100" alt="..." />
+                                </div>
                                 <div className="card-body text-center">
                                     <h5 className="">Product Name : Milk</h5>
                                     <h5 className="text-dark">Product Price : 200</h5>
@@ -63,8 +67,10 @@ const Home = () => {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div class="card h-auto mb-3 card-bg text-dark border border-info border-2 rounded focus">
-                                <img src={tang} className="card-img-top img-fluid" alt="..." />
+                            <div class="card h-100 mb-3 card-bg text-dark border border-info border-2 rounded focus">
+                                <div className="text-center">
+                                    <img src={tang} className="card-img-top img-fluid w-50 h-100" alt="..." />
+                                </div>
                                 <div className="card-body text-center">
                                     <h5 className="">Product Name : Tang</h5>
                                     <h5 className="text-dark">Product Price : 300$</h5>
